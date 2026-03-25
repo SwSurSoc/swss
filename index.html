@@ -274,6 +274,155 @@
       background: #0a0a0a;
     }
 
+    /* ── Foraging Walks ────────────────────────────────── */
+    .foraging-divider {
+      border: none;
+      border-top: 1px solid rgba(240, 228, 208, 0.1);
+      margin: 3rem 0;
+      position: relative;
+    }
+
+    .foraging-divider::before {
+      content: '✦';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: #0a0a0a;
+      padding-right: 1rem;
+      color: #e8a820;
+      font-size: 0.75rem;
+      opacity: 0.6;
+    }
+
+    .foraging-eyebrow {
+      font-family: 'Vensfolk', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #e8a820;
+      margin-bottom: 1rem;
+      opacity: 0.8;
+    }
+
+    .foraging-title {
+      font-family: 'Vensfolk', sans-serif;
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      text-transform: uppercase;
+      color: #f0e4d0;
+      margin-bottom: 1.5rem;
+      line-height: 1.05;
+    }
+
+    .foraging-body {
+      font-family: 'Vensfolk', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(240, 228, 208, 0.78);
+      max-width: 580px;
+      margin-bottom: 1.2rem;
+    }
+
+    .foraging-subhead {
+      font-family: 'Vensfolk', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(240, 228, 208, 0.35);
+      margin: 2.5rem 0 1.1rem;
+    }
+
+    .foraging-walks {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      max-width: 540px;
+    }
+
+    .walk-card {
+      display: flex;
+      align-items: stretch;
+      border: 1px solid rgba(232, 168, 32, 0.45);
+      border-radius: 0;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.02);
+      transition: background 0.25s ease, border-color 0.25s ease;
+    }
+
+    .walk-card:hover {
+      background: rgba(232, 168, 32, 0.04);
+      border-color: #e8a820;
+    }
+
+    .walk-card-body {
+      flex: 1;
+      padding: 1.1rem 1.3rem;
+    }
+
+    .walk-location {
+      font-family: 'Vensfolk', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #f0e4d0;
+      margin-bottom: 0.2rem;
+    }
+
+    .walk-venue {
+      font-family: 'Vensfolk', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.75rem;
+      color: rgba(240, 228, 208, 0.35);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.55rem;
+    }
+
+    .walk-when {
+      font-family: 'Vensfolk', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      color: #e8a820;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .walk-card-action {
+      display: flex;
+      align-items: center;
+      padding: 0 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .walk-card-action a {
+      font-family: 'Vensfolk', 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(232, 168, 32, 0.7);
+      text-decoration: none;
+      border: 1px solid rgba(232, 168, 32, 0.25);
+      border-radius: 0;
+      padding: 0.45rem 0.9rem;
+      white-space: nowrap;
+      transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .walk-card-action a:hover {
+      color: #0a0a0a;
+      background: #e8a820;
+      border-color: #e8a820;
+    }
+
+    @media (max-width: 480px) {
+      .walk-card {
+        flex-direction: column;
+      }
+
+      .walk-card-action {
+        padding: 0 1.3rem 1.1rem;
+        justify-content: flex-start;
+      }
+    }
+
     /* ── Contact Form ──────────────────────────────────── */
     .contact {
       background: #0a0a0a;
@@ -620,9 +769,62 @@
         Through foraging walks, shared food, ritual and live performance, we invite participants to step into a piece of unfolding folklore. One in which they are not the audience alone, but are invited to become members.
       </p>
 
-      <h2 class="section-title">About <span class="accent">Can You Hear Us</span></h2>
+      <!-- ═══════════════ FORAGING WALKS ══════════════════ -->
+      <hr class="foraging-divider">
+
+      <p class="foraging-eyebrow">An Invitation</p>
+      <h3 class="foraging-title">Reconnect with<br>the <span class="accent">Land</span></h3>
+
+      <p class="foraging-body">
+        As the Island awakens, the Somewhen Survival Society invites you to step out of the modern rush and into the hedgerows. Our Spring foraging walks are more than just a lesson in identification; they are an invitation to rediscover our landscape and the abundance it provides.
+      </p>
+      <p class="foraging-body">
+        Join us to explore the seasonal larder, learn the folklore of our native flora, and connect with the ancient rhythms of the Isle of Wight. Whether you are a seasoned gatherer or a curious beginner, these walks offer a chance to sharpen your senses and deepen your relationship with the wild world around us.
+      </p>
+
+      <p class="foraging-subhead">Find a walk in your corner of the Island</p>
+
+      <div class="foraging-walks">
+
+        <div class="walk-card">
+          <div class="walk-card-body">
+            <p class="walk-location">Niton</p>
+            <p class="walk-venue">Village Hall</p>
+            <p class="walk-when">April 25th &nbsp;·&nbsp; 10:00</p>
+          </div>
+          <div class="walk-card-action">
+            <a href="https://wildfoodwalksniton.eventbrite.co.uk" target="_blank" rel="noopener">Book Tickets</a>
+          </div>
+        </div>
+
+        <div class="walk-card">
+          <div class="walk-card-body">
+            <p class="walk-location">Shalfleet</p>
+            <p class="walk-venue">Village Hall</p>
+            <p class="walk-when">April 26th &nbsp;·&nbsp; 10:00</p>
+          </div>
+          <div class="walk-card-action">
+            <a href="https://wildfoodwalkshalfleet.eventbrite.co.uk" target="_blank" rel="noopener">Book Tickets</a>
+          </div>
+        </div>
+
+        <div class="walk-card">
+          <div class="walk-card-body">
+            <p class="walk-location">Freshwater</p>
+            <p class="walk-venue">Location TBC</p>
+            <p class="walk-when">April 26th &nbsp;·&nbsp; 14:00</p>
+          </div>
+          <div class="walk-card-action">
+            <a href="https://wildfoodwalkfreshwater.eventbrite.co.uk" target="_blank" rel="noopener">Book Tickets</a>
+          </div>
+        </div>
+
+      </div>
+      <!-- ══════════════════════════════════════════════════ -->
+
+      <h2 class="section-title" style="margin-top: 4rem;">About <span class="accent">Can You Hear Us?</span></h2>
       <p class="section-text">
-      <a href="https://creativeisland.org/can-you-hear-us/" target="_blank" rel="noopener" style="color: #e8a820; text-decoration: underline;">Can You Hear Us</a> is a six-week Island-wide celebration of culture and creativity, taking place across the Isle of Wight in Autumn 2026. Led by Creative Island, the project aims to showcase local talent, strengthen community arts, and connect the Island's heritage and environment to the wider world.
+      <a href="https://creativeisland.org/can-you-hear-us/" target="_blank" rel="noopener" style="color: #e8a820; text-decoration: underline;">Can You Hear Us?</a> is a six-week Island-wide celebration of culture and creativity, taking place across the Isle of Wight in Autumn 2026. Led by Creative Island, the project aims to showcase local talent, strengthen community arts, and connect the Island's heritage and environment to the wider world.
       </p>
     </div>
   </section>
