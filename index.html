@@ -448,6 +448,31 @@
       border-color: #e8a820;
     }
 
+    .walk-card-action .sold-out {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(240, 228, 208, 0.4);
+      border: 1px solid rgba(240, 228, 208, 0.15);
+      border-radius: 0;
+      padding: 0.45rem 0.9rem;
+      white-space: nowrap;
+    }
+
+    .walk-card.is-sold-out {
+      border-color: rgba(232, 168, 32, 0.18);
+    }
+
+    .walk-card.is-sold-out:hover {
+      background: #211f1c;
+      border-color: rgba(232, 168, 32, 0.18);
+    }
+
+    .walk-card.is-sold-out .walk-when {
+      color: rgba(240, 228, 208, 0.4);
+    }
+
     @media (max-width: 480px) {
       .walk-card {
         flex-direction: column;
@@ -901,14 +926,28 @@
           <div class="walk-card-body">
             <p class="walk-location">Shalfleet</p>
             <p class="walk-venue">Shalfleet Village Hall</p>
-            <p class="walk-when">Saturday 19 Sept &nbsp;·&nbsp; 2:00pm &amp; 7:30pm</p>
+            <p class="walk-when">Saturday 19 Sept &nbsp;·&nbsp; 2:00pm</p>
           </div>
           <div class="walk-card-action">
             <a href="https://harvestmoonshalfleet.eventbrite.co.uk" target="_blank" rel="noopener">Book Tickets</a>
           </div>
         </div>
 
-        <div class="walk-card">
+        <div class="walk-card is-sold-out">
+          <div class="walk-card-logo">
+            <img src="images/sss-logo.jpg" alt="">
+          </div>
+          <div class="walk-card-body">
+            <p class="walk-location">Shalfleet</p>
+            <p class="walk-venue">Shalfleet Village Hall</p>
+            <p class="walk-when">Saturday 19 Sept &nbsp;·&nbsp; 7:30pm</p>
+          </div>
+          <div class="walk-card-action">
+            <span class="sold-out">Sold Out</span>
+          </div>
+        </div>
+
+        <div class="walk-card is-sold-out">
           <div class="walk-card-logo">
             <img src="images/sss-logo.jpg" alt="">
           </div>
@@ -918,7 +957,7 @@
             <p class="walk-when">Saturday 26 Sept &nbsp;·&nbsp; 7:30pm</p>
           </div>
           <div class="walk-card-action">
-            <a href="https://harvestmoonniton.eventbrite.co.uk" target="_blank" rel="noopener">Book Tickets</a>
+            <span class="sold-out">Sold Out</span>
           </div>
         </div>
 
@@ -928,11 +967,11 @@
           </div>
           <div class="walk-card-body">
             <p class="walk-location">Freshwater</p>
-            <p class="walk-venue">Freshwater Memorial Hall</p>
+            <p class="walk-venue">Tapnell Farm, The Events Barn</p>
             <p class="walk-when">Saturday 3 Oct &nbsp;·&nbsp; 7:30pm</p>
           </div>
           <div class="walk-card-action">
-            <a href="https://harvestmoonfreshwater.eventbrite.co.uk" target="_blank" rel="noopener">Book Tickets</a>
+            <a href="https://harvestmoontapnell.eventbrite.co.uk" target="_blank" rel="noopener">Book Tickets</a>
           </div>
         </div>
 
